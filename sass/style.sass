@@ -1,0 +1,354 @@
+/* -------- fonts ----------- */
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+@import url('https://fonts.googleapis.com/css?family=Anton|Glegoo');
+
+/* ------------- general -------- */
+
+$white: #fff
+$black: #000
+
+/* ------------- general -------- */
+
+*
+	box-sizing: border-box
+
+a
+	text-decoration: none
+	color: inherit
+	cursor: pointer
+
+
+.hamburger-btn,.cross-btn
+	position: fixed
+	top: 10px
+	right: 10px
+	font-size: 30px
+	color: $white
+	z-index: 20
+	background: inherit
+	border: none
+	outline: none
+
+.btn-language
+	position: fixed
+	top: 4px
+	z-index: 20
+	right: 60px
+	background: inherit
+	color: $white
+	border: none
+	outline: none
+	cursor: pointer
+	margin: 10px auto
+	font-size: 20px
+	transition-duration: 0.7s
+	&:hover
+		transform: scale(1.2)
+
+.res__nav
+	font: 20px Anton, Arial, sans-serif 
+	display: none
+	color: $white
+	position: fixed
+	top: 0
+	right: 0
+	z-index: 10
+	background: rgba(0,0,0,.8)
+	height: 100%
+	width: 100%
+	ul
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%,-50%)
+		padding: 0
+		list-style-type: none
+		li
+			padding: 10px
+
+/* ------------- intro -------- */
+
+.intro
+	background: url('../img/bg1.jpg') no-repeat center/cover
+	text-align: center
+	color: $white
+	.intro__title
+		font: 700 72px Raleway, Arial, sans-serif 
+	.intro__text
+		font: 700 48px Raleway, Arial, sans-serif 
+	.ie__title
+		font: 72px Arial, sans-serif 
+	.ie__text
+		font: 700 48px Arial, sans-serif 
+	.ie__text, .ie__title
+		display: none
+		font-weight: 700
+	.intro__scroll
+		margin: 200px auto 0
+		width: 75px
+		height: 75px
+		color: $white
+		border: 2px solid $white
+		border-radius: 50%
+		font-size: 75px
+		line-height: 75px	
+	
+
+		
+/* ------------- about me -------------- */
+
+.about
+	font-family: Glegoo, Times, sans
+	background: url('../img/bg4.jpg') no-repeat center/cover
+	color: $white
+	position: relative
+	&:before
+		position: absolute
+		left: 0
+		right: 0
+		width: 100%
+		height: 100%
+		content: ""
+		background-color: rgba(0,0,0,.3)
+	.about__container
+		position: relative
+		margin: 0 auto
+		width: 60%
+		.about__photo
+			width: 150px
+			height: 150px
+			border-radius: 50%
+			border: 2px solid $white
+			float: right
+			display: block
+			margin: 5px
+		.about__tile
+			font-size: 24px
+		.about__text
+			font-szie: 18px
+			padding 10px 0	
+	
+	
+
+/* ------------- works -------------- */
+
+.works
+	background: url('../img/bg3.jpg') no-repeat center/cover
+	position: relative
+
+.container__carousel 
+	margin: 0 auto
+	max-width: 250px
+	height: 25%
+	position: relative
+	perspective: 900px
+
+
+.carousel 
+	height: 100%
+	width: 100%
+	position: absolute
+	transform-style: preserve-3d
+	transition: transform 1s
+
+
+.carousel__item
+	position: absolute
+	background: #000
+	width: 100%
+	height: 100%
+	text-align: center
+	color: $white
+  	opacity: 0.95
+  	border-radius: 10px
+	img
+		width: 100%
+		height: 100%
+		object-fit: cover
+	
+.one
+	transform: rotateY(0deg) translateZ(250px)
+	
+.two
+	transform: rotateY(60deg) translateZ(250px)
+
+	
+.three
+	transform: rotateY(120deg) translateZ(250px)
+	
+.four
+	transform: rotateY(180deg) translateZ(250px)
+
+.five
+	transform: rotateY(240deg) translateZ(250px)
+
+.six
+	transform: rotateY(300deg) translateZ(250px)
+
+.next, .prev
+	position: absolute
+	bottom: 10px
+	display: inline-block
+	color: #444
+	cursor: pointer
+	background: inherit
+	border: none
+	outline: none
+	font-size: 40px
+	color: #000
+	transition: box-shadow 0.1s, top 0.1s
+
+.next
+	left: 40%
+.prev
+	right: 40%
+
+.res__works
+	display: none
+	width 100%
+	text-align: center
+	color: #000
+	img
+		box-shadow: 5px 5px 5px #000
+		width: 300px
+		height: 225px
+		margin: 10px 20px
+
+
+/* ------------- skills -------- */
+
+.skills
+	background: url('../img/bg2.jpg') no-repeat center/cover
+	text-align: center
+	position: relative
+	.row
+		margin: 0
+		.skills__logo
+			height: 100px
+			width: 100px
+			margin: 0 50px
+			transition-duration: 0.5s
+			&:hover
+				transform: scale(1.2)	
+	.row__three
+		padding-bottom: 200px
+
+/* --------------- media queries ------------ */
+
+@media (max-width: 991px) 
+	
+	.intro
+		background: url('../img/MINbg1.jpg') no-repeat center/cover
+		padding: 0 10px
+		.intro__title
+			font-size: 48px
+		.intro__text
+			font-size: 32px
+		.ie__title
+			font-size: 48px
+		.ie__title
+			font-size: 32px
+		.intro__scroll
+			display: none
+	
+	.about
+		background: url('../img/MINbg4.jpg') no-repeat center/cover
+
+	.works
+		background: url('../img/MINbg3.jpg') no-repeat center/cover
+
+	.skills
+		background: url('../img/MINbg2.jpg') no-repeat center/cover
+		.row
+			margin: 30px 0
+			.skills__logo
+				height: 75px
+				width: 75px
+				margin: 0 30px
+
+		
+@media (max-width: 767px)
+	
+
+	.intro
+		.intro__title
+			font-size: 36px
+		.intro__text
+			font-size: 28px
+		.ie__title
+			font-size: 36px
+		.ie__text
+			font-size: 28px
+	
+	.about
+		font-size: 12px
+		padding: 0 10px
+		background: url('../img/MINbg4.jpg') no-repeat center/cover
+		text-align: center
+		.about__container
+			.about__photo
+				margin: 0 auto
+				float: none
+
+	.works
+		background: url('../img/MINbg3.jpg') no-repeat center/cover
+		position: relative
+		.container__carousel 
+			display: none
+
+	.next, .prev 
+		display: none
+	
+	.res__works
+		display: block
+	
+	.skills
+		background: url('../img/MINbg2.jpg') no-repeat center/100% 100%
+		.row
+			.skills__logo
+				height: 50px
+				width: 50px
+				margin: 0 10px
+			
+		.row__three
+			padding-bottom: 100px
+
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) 
+    
+	.intro
+		.ie__text, .ie__title
+			display: block
+		.intro__text, .intro__title
+			display: none
+
+	.works
+		.container__carousel 
+			display: none
+
+	.res__works
+		display: block
+		text-align: center
+		padding: 10px
+		
+	.next, .prev 
+		display: none
+
+	.hamburger-btn, .cross-btn,.btn-language
+		background-color: rgba(0,0,0,.7)
+		
+
+@supports (-ms-ime-align:auto)
+		
+	.intro
+		.intro__text, .intro__title
+			font-family: Arial, sans-serif
+			font-weight: 700
+
+
+
+
+
+
+
